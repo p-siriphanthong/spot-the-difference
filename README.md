@@ -1,4 +1,4 @@
-# spot-the-difference
+# Spot The Difference
 
 The game to find the different characters in 60 seconds
 
