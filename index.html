@@ -114,19 +114,27 @@
       let counterInteval
 
       const setOfPairCharacters = [
-        ['1', '7'],
+        ['<', '>'],
+        ['1', 'l'],
         ['5', 'S'],
+        ['6', '9'],
+        ['8', 'S'],
         ['u', 'n'],
         ['l', 'i'],
+        ['t', 'f'],
         ['p', 'q'],
         ['D', 'O'],
+        ['F', 'P'],
         ['M', 'W'],
         ['Q', 'O'],
         ['N', 'M'],
-        ['ต', 'ค'],
+        ['ค', 'ศ'],
+        ['ค', 'ต'],
         ['ป', 'ฝ'],
         ['ส', 'ล'],
+        ['บ', 'ป'],
         ['บ', 'ษ'],
+        ['น', 'ม'],
       ]
 
       function startGame() {
@@ -157,8 +165,10 @@
 
       function loadGame() {
         let elements = ''
+        // const pairCharacters =
+        //   setOfPairCharacters[getRandomInteger(setOfPairCharacters.length)]
         const pairCharacters =
-          setOfPairCharacters[getRandomInteger(setOfPairCharacters.length)]
+          setOfPairCharacters[setOfPairCharacters.length - 1]
         const role = getRandomInteger(2)
         const character = {
           base: role ? pairCharacters[0] : pairCharacters[1],
