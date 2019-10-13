@@ -165,10 +165,8 @@
 
       function loadGame() {
         let elements = ''
-        // const pairCharacters =
-        //   setOfPairCharacters[getRandomInteger(setOfPairCharacters.length)]
         const pairCharacters =
-          setOfPairCharacters[setOfPairCharacters.length - 1]
+          setOfPairCharacters[getRandomInteger(setOfPairCharacters.length)]
         const role = getRandomInteger(2)
         const character = {
           base: role ? pairCharacters[0] : pairCharacters[1],
