@@ -51,8 +51,10 @@
         margin: 5px;
       }
       .game-wrapper {
-        width: 600px;
-        height: 600px;
+        width: calc(100vw - 20px);
+        height: calc(100vw - 20px);
+        max-width: 600px;
+        max-height: 600px;
         border: 1px solid white;
         display: flex;
         flex-direction: column;
@@ -63,8 +65,10 @@
         display: flex;
       }
       .character {
-        width: 30px;
-        height: 30px;
+        width: calc((100vw - 20px) / 20);
+        height: calc((100vw - 20px) / 20);
+        max-width: 30px;
+        max-height: 30px;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -72,6 +76,15 @@
       }
       .character:hover {
         color: DarkOrange;
+      }
+      @media only screen and (max-width: 768px) {
+        .scores {
+          position: relative;
+          text-align: center;
+          top: 0;
+          right: 0;
+          margin-bottom: 20px;
+        }
       }
     </style>
   </head>
