@@ -113,7 +113,7 @@
       let maxScore = 0
       let counterInteval
 
-      const setOfCharacter = [
+      const setOfPairCharacters = [
         ['1', '7'],
         ['5', 'S'],
         ['u', 'n'],
@@ -157,11 +157,12 @@
 
       function loadGame() {
         let elements = ''
-        const set = setOfCharacter[getRandomInteger(setOfCharacter.length)]
+        const pairCharacters =
+          setOfPairCharacters[getRandomInteger(setOfPairCharacters.length)]
         const role = getRandomInteger(2)
         const character = {
-          base: role ? set[0] : set[1],
-          special: role ? set[1] : set[0],
+          base: role ? pairCharacters[0] : pairCharacters[1],
+          special: role ? pairCharacters[1] : pairCharacters[0],
         }
         const specialPosition = {
           row: getRandomInteger(size),
